@@ -8,7 +8,7 @@ Installing
 
 From the repo:
 
-	$ cordova plugin add https://github.com/apla/me.apla.cordova.app-preferences
+	$ cordova plugin add https://github.com/vijayrajasekaran/cordova-plugin-referrer
 
 
 Synopsis
