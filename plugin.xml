@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-referrer"
+    version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=2.8.0" />
+  </engines>
+
+  <name>InstallReferrer</name>
+    <description>Android InstallReferrer Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>referrer</keywords>
+    
+  <platform name="android">
+	  <source-file src="src/Receiver.java" target-dir="src/" />
+
+	  <config-file target="AndroidManifest.xml" parent="/manifest/application">
+		  <receiver android:exported="true" android:name="com.install.referral.Receiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+    </config-file>
+  </platform>
+</plugin>
