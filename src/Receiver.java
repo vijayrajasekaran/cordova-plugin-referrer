@@ -12,10 +12,11 @@ public class Receiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        //Get referrer
+        /************* Get referrer ************/
+		
         String referrer = intent.getStringExtra("referrer");
 
-        //Save Referrer Info from SharedPreferences
+        /****************** Save Referrer Value to SharedPreferences **********************/
 
         SharedPreferences sharedpreferences = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor edit = sharedpreferences.edit();
